@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Title Page</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<style type="text/css">
+	html{box-sizing:border-box}*,*:after,*:before{box-sizing:inherit}article,aside,details,figure,footer,header,main,nav,section,summary{display:block}abbr,address,article,aside,audio,blockquote,body,body div,caption,cite,code,dd,del,details,dfn,dl,dt,em,fieldset,figure,footer,form,h1,h2,h3,h4,h5,h6,header,html,iframe,img,ins,kbd,label,legend,li,main,mark,menu,nav,object,ol,p,pre,q,samp,section,span,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font-weight:400;vertical-align:baseline;background:transparent}b,i,small,strong{margin:0;padding:0;border:0;vertical-align:baseline;background:transparent}img{vertical-align:middle}embed,img,object{max-width:100%}a,a:active,a:focus,a:hover{outline:0;text-decoration:none;color:#000}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ul{list-style:none}
+
+	.brand-admin{
+		padding: 10px 15px 10px 20px;
+		height: auto;
+		font-size: 20px;
+	}
+	.back-web{
+		border-left: 1px #6E6E6E solid;
+		border-right: 1px #6E6E6E solid;
+	}
+	.nav-admin{
+		border-radius: 0;
+		min-height: 0;
+		margin-bottom: 0;
+	}
+	.navbar li a{
+		padding: 10px 25px;
+		font-size: 14px;
+	}
+	.navbar-toggle{
+		margin: 5px 15px 3px 0;
+	}
+	.container-fluid{
+		padding: 0;
+	}
+	.col{
+		padding: 0;
+	}
+	.side-bar-admin{
+		border-radius: 0 4px 4px 0;
+		border-right: 2px #D8D8D8 solid;
+	}
+	.path{
+		padding:  8.5px 15px;
+		border-bottom: 2px #D8D8D8 solid;
+	}
+	.content-admin{
+		padding: 10px 0 0 15px;
+	}
+</style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse nav-admin" role="navigation">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header col-md-2">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand brand-admin" href="#"><i class="fab fa-microsoft"></i>&nbsp;Administrator</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li class="back-web"><a href="#"><i class="fas fa-reply"></i>&nbsp;Vào trang web</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Thông báo</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Xin chào: Admin<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div>
+	</nav>
+	<div class="container-fluid">
+		<div class="col-md-2 col">
+			<div class="panel panel-default side-bar-admin">
+				<table class="table">
+					<thead>
+						<tr>
+							<th><i class="glyphicon glyphicon-home"></i>&nbsp;Trang chủ Admin</th>
+						</tr>
+					</thead>
+					<thead>
+						<tr>
+							<th>Heading 1</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Content 1</td>
+						</tr>
+						<tr>
+							<td>Content 2</td>
+						</tr>
+					</tbody>
+					<thead>
+						<tr>
+							<th>Heading 1</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Content 1</td>
+						</tr>
+						<tr>
+							<td>Content 2</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="col-md-10 col">
+			<div class="panel-heading path">Path here</div>
+			<div class="content-admin">
+				<div class="jumbotron">
+					<div class="container">
+						<h1>Hello, world!</h1>
+						<p>Contents ...</p>
+						<p>
+							<a class="btn btn-primary btn-lg">Learn more</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Bootstrap JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="Hello World"></script>
+</body>
+</html>

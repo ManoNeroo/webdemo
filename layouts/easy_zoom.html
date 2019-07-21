@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easyzoom@2.5.2/css/easyzoom.css"/>
+	<style type="text/css">
+	.easyzoom {
+		display: inline-block;
+		margin: 100px;
+	}
+	.easyzoom img {
+		vertical-align: bottom;
+	}
+</style>
+</head>
+<body>
+	<div class="easyzoom easyzoom--overlay">
+		<a href="https://images6.alphacoders.com/868/868080.jpg">
+			<img src="https://images6.alphacoders.com/868/868080.jpg" alt="" width="599.3" height="400" />
+		</a>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/easyzoom@2.5.2/dist/easyzoom.min.js"></script>
+	<script>
+		var easyzoom = $('.easyzoom').easyZoom();
+		var api = easyzoom.data('easyZoom');
+
+	</script>
+</body>
+</html>

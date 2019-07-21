@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Title Page</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/item.css">
+	<style type="text/css">
+	.area_article {
+		display: block;
+		font-size: 16px;
+		color: #333;
+		line-height: 1.5;
+		margin-top: 15px;
+		max-width: 750px;
+		overflow: hidden;
+		height: 426px;
+	}
+	.area_article.active{
+		height: inherit;
+	}
+	.area_article h2, .area_article h3 {
+		display: block;
+		overflow: hidden;
+		font-size: 20px;
+		color: #333;
+		margin-bottom: 10px;
+		line-height: 1.3em;
+		font-weight: bold;
+	}
+	.area_article h2 a, .area_article h3 a {
+		font-weight: bold;
+		font-size: 20px;
+	}
+	.area_article a {
+		color: #50a8e3;
+	}
+	.area_article img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+		max-height: 584px;
+		margin: 10px auto;
+	}
+	.boxArticle .show-more::before {
+		height: 55px;
+		margin-top: -45px;
+		content: -webkit-gradient(linear,0% 100%,0% 0%,from(#fff),color-stop(.2,#fff),to(rgba(255,255,255,0)));
+		display: block;
+	}
+	.readmore {
+		width: 90px;
+		display: block;
+		overflow: hidden;
+		position: relative;
+		line-height: 40px;
+		font-size: 14px;
+		color: #288ad6;
+		margin: 10px auto;
+		cursor: pointer;
+	}
+	.readmore:after {
+		content: '';
+		width: 0;
+		right: 0;
+		border-top: 6px solid #288ad6;
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		display: inline-block;
+		vertical-align: middle;
+		margin: -2px 0 0 5px;
+	}
+
+
+
+	.path {
+		display: block;
+		overflow: hidden;
+		margin: 0;
+		background: #fff;
+		line-height: 32px;
+		padding-top: 5px;
+		padding-left: 20px;
+	}
+	.path li {
+		display: inline-block;
+		vertical-align: middle;
+		overflow: hidden;
+	}
+	.path li a {
+		display: inline-block;
+		white-space: nowrap;
+		font-size: 14px;
+		color: #288ad6;
+		padding: 0 10px 0 0;
+	}
+	.path span {
+		display: inline-block;
+		font-size: 20px;
+		color: #999;
+		padding: 2px 5px 0 0;
+		line-height: 1;
+	}
+	.pro-name{
+		width: 100%;
+		background: #fff;
+	}
+	.pro-name h3{
+		float: left;
+		overflow: hidden;
+		font-size: 24px;
+		color: #333;
+		line-height: 40px;
+		padding-left: 20px;
+	}
+	.pro-name>div{
+		float: left;
+		font-size: 14px;
+		color: #288ad6;
+		padding: 10px 10px 0 11px;
+	}
+	.pro-detail{
+		display: block;
+		padding: 15px 0;
+		margin-top: 1px;
+		background: #fff;
+	}
+	.pro-pic {
+		padding: 0;
+	}
+	.pro-pic img {
+		display: block;
+		height: auto;
+		margin: auto;
+		cursor: pointer;
+		max-width: 100%;
+	}
+	.choose-color{
+		display: block;
+		position: relative;
+		margin: 15px 0 10px 0;
+	}
+	.choose-color ul {
+		display: block;
+		margin: auto;
+		text-align: center;
+		max-height: 98px;
+	}
+	.choose-color li {
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+		overflow: hidden;
+		font-size: 11px;
+		color: #333;
+		padding-bottom: 5px;
+		line-height: normal;
+		width: 50px;
+	}
+	.choose-color li div {
+		display: block;
+		width: 50px;
+		height:50px;
+		border: 1px solid #dfdfdf;
+		border-radius: 4px;
+		padding: 6px;
+		background: #fff;
+		margin-bottom: 5px;
+		cursor: pointer;
+	}
+	.choose-color li img {
+		display: block;
+		width: 35px;
+		height: 35px;
+		margin: auto;
+		border-radius: 4px;
+	}
+	.icboxopen{
+		background-position: -286px -200px;
+		width: 36px;
+		height: 34px;
+		margin:3px 0;
+	}
+	.icimg360{
+		background-position: -325px -201px;
+		width: 37px;
+		height: 33px;
+		margin:3px 0;
+	}
+	.icvideo{
+		background-position: -367px -203px;
+		width: 35px;
+		height: 29px;
+		margin:4px 0;
+	}
+	.pro-pri {
+		display: block;
+		overflow: hidden;
+		line-height: 20px;
+		padding: 0 10px 10px;
+	}
+	.pro-pri strong {
+		display: inline-block;
+		overflow: hidden;
+		font-size: 24px;
+		color: #e10c00;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+	.pro-pri label {
+		display: inline-block;
+		position: relative;
+		font-size: 11px;
+		color: #fff;
+		font-weight: 600;
+		border-radius: 3px;
+		padding: 0 5px 4px 8px;
+		margin: 0 0 5px 5px;
+		height: 20px;
+	}
+	.tragop {
+		background: linear-gradient(-90deg,#ec1f1f 0%,#ff9c00 100%);
+	}
+	.tgnh {
+		background-color: #ecf7ed;
+		border-radius: 3px;
+		border: solid 1px #c4ddc8;
+		margin: 5px 10px 10px;
+		padding: 0 10px;
+		font-weight: bold;
+		line-height: 30px;
+	}
+	.tgnh:before {
+		content: '';
+		background: url('../images/w-icon.png');
+		background-position: -371px -124px;
+		width: 19px;
+		height: 21px;
+		margin-right: 10px;
+		float: left;
+		margin-top: 4px;
+	}
+	.tgnh span {
+		line-height: 30px;
+		padding-left: 10px;
+		border-left: 1px solid #c4ddc8;
+		display: block;
+		margin-left: 28px;
+	}
+	.tgnh span a {
+		color: #30a43b;
+	}
+	.pro-prmt {
+		display: block;
+		overflow: hidden;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		position: relative;
+		margin: 5px 10px 12px;
+		background: #fff;
+		padding-bottom: 10px;
+	}
+	.pro-prmt strong {
+		display: block;
+		overflow: hidden;
+		font-size: 15px;
+		color: #333;
+		padding: 15px 15px 10px 15px;
+		text-transform: uppercase;
+	}
+	.pro-prmt .info-prmt span {
+		display: block;
+		overflow: hidden;
+		font-size: 14px;
+		color: #333;
+		padding: 0 15px 5px 40px;
+	}
+	.pro-prmt .info-prmt span:before {
+		content: '';
+		width: 14px;
+		height: 14px;
+		background: url(../images/w-icon.png) no-repeat -419px -151px;
+		margin-left: -20px;
+		margin-right: 0;
+		float: left;
+		margin-top: 2px;
+	}
+	.option-repay, .option-shiper {
+		margin: 10px;
+		cursor: pointer;
+	}
+	.option-shiper span{
+		position: relative;
+		padding-left: 22px;
+	}
+	.option-shiper span:before{
+		content: '';
+		position: absolute;
+		top: 1px;
+		left: 0;
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		line-height: 15px;
+		font-size: 11px;
+		text-align: center;
+		color: #fff;
+		background-color: #fff;
+		border: solid 1px silver;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+	}
+	.option-shiper span.active:before{
+		content: '✓';
+		border: solid 1px #4990e2;
+		background-color: #4990e2;
+	}
+	.area_order {
+		display: block;
+		overflow: hidden;
+		margin: 10px;
+	}
+	.area_order .buy_now {
+		display: block;
+		overflow: hidden;
+		padding: 7px 0;
+		border-radius: 4px;
+		font-size: 16px;
+		line-height: normal;
+		text-transform: uppercase;
+		color: #fff;
+		text-align: center;
+		background: -webkit-gradient(linear,0% 0%,0% 100%,from(#fd6e1d),to(#f59000));
+		background: -webkit-linear-gradient(top,#f59000,#fd6e1d);
+		background: -moz-linear-gradient(top,#f59000,#fd6e1d);
+		background: -ms-linear-gradient(top,#f59000,#fd6e1d);
+		background: -o-linear-gradient(top,#f59000,#fd6e1d);
+	}
+	.area_order span {
+		display: block;
+		font-size: 13px;
+		color: #fff;
+		text-transform: none;
+		padding-top: 3px;
+	}
+	.area_order .buy_repay {
+		line-height: normal;
+		display: block;
+		padding: 7px 0;
+		text-align: center;
+		margin: 10px 0 0;
+		background: #288ad6;
+		color: #fff;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		font-size: 15px;
+		text-transform: uppercase;
+		width: 48.5%;
+		float: left;
+	}
+	.area_order .buy_repay.s {
+		float: right;
+	}
+	.call {
+		display: block;
+		overflow: hidden;
+		padding: 0 10px;
+		font-size: 14px;
+		color: #333;
+		margin-top: -10px;
+	}
+	.call>div{
+		padding-bottom: 5px;
+		padding-top: 5px;
+		margin-top: 8px;
+		text-align: center;
+	}
+
+	.call span {
+		display: inline-block;
+		padding: 5px 0 0;
+	}
+	.call a {
+		color: #288ad6;
+	}
+	.policy {
+		display: block;
+		overflow: hidden;
+		border: 1px solid #ddd;
+		border-radius: 3px;
+		padding-bottom: 5px;
+		margin-bottom: 10px;
+		padding-top: 10px;
+	}
+	.policy li:first-child {
+		padding-top: 0;
+		min-height: 30px;
+	}
+	.policy li {
+		display: block;
+		overflow: hidden;
+		padding: 5px 0 5px 28px;
+		font-size: 14px;
+		color: #333;
+		line-height: 20px;
+		margin: 0 10px;
+		border-bottom: solid 1px #f0f0f0;
+		position: relative;
+	}
+	.policy .inpr:before {
+		content: '';
+		width: 19px;
+		height: 16px;
+		position: absolute;
+		display: block;
+		top: 4px;
+		left: 0;
+		background-image: url('../images/w-icon.png');
+		background-position: -304px -246px;
+	}
+	.policy li a {
+		color: #288ad6;
+	}
+	.policy .wrpr:before {
+		content: '';
+		background: url('../images/w-icon.png');
+		background-position: -277px -240px;
+		width: 19px;
+		height: 27px;
+		position: absolute;
+		display: block;
+		top: 3px;
+		left: 0;
+	}
+	.policy .chpr:before {
+		content: '';
+		background:url('../images/w-icon.png');
+		background-position: -150px -134px;
+		width: 18px;
+		height: 20px;
+		position: absolute;
+		display: block;
+		top: 8px;
+		left: 0;
+	}
+	.productOld {
+		border: solid 1px #ddd;
+		padding: 10px 12px 10px 12px;
+		margin-bottom: 10px;
+		border-radius: 3px;
+		position: relative;
+	}
+	.viewold {
+		display: block;
+		overflow: hidden;
+		font-size: 14px;
+		color: #288ad6;
+		border-radius: 3px;
+	}
+	.viewold div {
+		display: block;
+		overflow: hidden;
+		color: #333;
+		margin-top: 3px;
+	}
+	.viewold div span {
+		display: block;
+		line-height: 22px;
+	}
+	.viewold div span strong {
+		color: #e10c00;
+	}
+	.pro-post{
+		background: #fff;
+	}
+	.pro-post h2 {
+		display: block;
+		line-height: 1.3em;
+		font-size: 20px;
+		color: #333;
+		margin-bottom: 10px;
+		padding-left: 5px;
+	}
+	.pro-slider:hover .pro-prev{
+		left:5px;
+	}
+	.pro-slider:hover .pro-next{
+		right:5px;
+	}
+	.pro-parameter h2 {
+		display: block;
+		line-height: 1.3em;
+		font-size: 20px;
+		color: #333;
+		margin-bottom: 0;
+	}
+	.parameter {
+		display: block;
+		position: relative;
+		overflow: hidden;
+		background: #fff;
+		padding-top: 10px;
+	}
+	.parameter li {
+		display: table;
+		background: #fff;
+		width: 100%;
+		border-top: 1px solid #eee;
+		padding: 5px 0;
+	}
+	.parameter li span {
+		display: table-cell;
+		width: 40%;
+		vertical-align: top;
+		padding: 5px 0;
+		font-size: 14px;
+		color: #666;
+	}
+	.parameter li div {
+		display: table-cell;
+		width: auto;
+		vertical-align: top;
+		padding: 6px 5px;
+		font-size: 14px;
+		color: #333;
+	}
+	.parameter li div a {
+		color: #288ad6;
+	}
+	.viewparameterfull {
+		display: block;
+		width: 100%;
+		padding: 6px 0;
+		margin: 10px 0 0;
+		cursor: pointer;
+		text-align: center;
+		font-size: 14px;
+		color: #288ad6;
+		background: #fff;
+		border: 1px solid #288ad6;
+		border-radius: 4px;
+	}
+	.newslist {
+		display: block;
+		overflow: hidden;
+		margin: 20px 0 0;
+	}
+	.newslist h4 {
+		display: block;
+		overflow: hidden;
+		font-size: 20px;
+		color: #333;
+		line-height: 1.3em;
+		padding-top: 20px;
+		padding-bottom: 5px;
+	}
+	.newslist li {
+		display: block;
+		overflow: hidden;
+		padding: 8px 0;
+	}
+	.newslist li a {
+		display: block;
+		overflow: hidden;
+	}
+	.newslist li img {
+		float: left;
+		width: 100px;
+		height: 60px;
+		margin-right: 10px;
+	}
+	.newslist li h3 {
+		display: block;
+		overflow: hidden;
+		color: #333;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+	}
+	.newslist li span {
+		display: block;
+		overflow: hidden;
+		font-size: 12px;
+		color: #888;
+	}
+	.icontgdd-com {
+		background-position: -325px -30px;
+		width: 12px;
+		height: 12px;
+		margin-right: 5px;
+		background-image: url(https://cdn.thegioididong.com/v2015/Content/desktop/images/V4/icondesktop@1x.png?v=001);
+		background-repeat: no-repeat;
+		display: inline-block;
+		line-height: 30px;
+		vertical-align: middle;
+	}
+	.newslist .viewall {
+		padding: 8px 0 0 0;
+		color: #288ad6;
+		display: block;
+	}
+	.accessories {
+		display: block;
+		overflow: hidden;
+		margin: 30px 0 0;
+	}
+	.accessories>div h3 {
+		display: block;
+		overflow: hidden;
+		font-size: 20px;
+		color: #333;
+		line-height: 1.3em;
+	}
+	.accessories li {
+		display: block;
+		overflow: hidden;
+		padding: 10px 0;
+	}
+	.accessories li a {
+		display: block;
+		overflow: hidden;
+	}
+	.accessories li img {
+		float: left;
+		width: 100px;
+		height: auto;
+		margin-right: 10px;
+	}
+	.accessories li h3 {
+		display: block;
+		overflow: hidden;
+		color: #333;
+		line-height: 1.3em;
+		font-weight: bold;
+		font-size: 14px;
+	}
+	.accessories li strong.gs {
+		float: left;
+		margin-right: 10px;
+	}
+	.accessories li strong {
+		display: block;
+		overflow: hidden;
+		font-size: 14px;
+		color: #d0021b;
+		padding: 3px 0;
+	}
+	.accessories li strong.gg {
+		color: #666;
+		text-decoration: line-through;
+		font-weight: normal;
+	}
+	.accessories li label.per {
+		background: #ee170b;
+	}
+	.accessories li label {
+		display: inline-block;
+		font-size: 11px;
+		color: #fff;
+		font-weight: 600;
+		border-radius: 2px;
+		padding: 0 5px;
+		height: 18px;
+	}
+	.accessories .viewall {
+		padding: 8px 0 0 0;
+		color: #288ad6;
+		display: block;
+	}
+	.hrt {
+		overflow: hidden;
+		padding-bottom: 5px;
+		margin-bottom: 15px;
+	}
+	.tltRt {
+		float: left;
+		overflow: hidden;
+		display: inline-block;
+		width: auto;
+		margin-right: 15px;
+		max-width: 430px;
+	}
+	.tltRt h3 {
+		display: block;
+		line-height: 1.3em;
+		font-size: 20px;
+		color: #333;
+	}
+	.toprt {
+		border: solid 1px #ddd;
+		border-radius: 5px;
+		padding: 5px 0;
+		margin-bottom: 20px;
+	}
+	.crt {
+		height: 120px;
+		box-sizing: border-box;
+	}
+	.crt .lcrt {
+		width: 17%;
+		float: left;
+		border-right: solid 1px #eee;
+		padding: 31px 12px;
+		height: 90%;
+		text-align: center;
+		box-sizing: border-box;
+		margin: 5px 7px 5px 7px;
+	}
+	.crt .lcrt b {
+		font-size: 40px;
+		color: #fd9727;
+		line-height: 40px;
+	}
+	.crt .lcrt b i{
+		vertical-align: baseline;
+	}
+	.crt .rcrt {
+		font-size: 13px;
+		overflow: hidden;
+		box-sizing: border-box;
+		padding: 10px 0;
+		width: 60%;
+		float: left;
+		border-right: solid 1px #eee;
+	}
+	.crt .rcrt .r {
+		padding: 1px 20px;
+	}
+	.crt .rcrt .r span i{
+		vertical-align: baseline;
+	}
+	.crt .rcrt .r:last-child span i{
+		margin-left: 4px;
+	}
+	.crt .rcrt .bgb {
+		width: 55%;
+		background-color: #e9e9e9;
+		height: 5px;
+		display: inline-block;
+		margin: 0 10px;
+		border-radius: 5px;
+	}
+	.crt .rcrt .bgb .bgb-in {
+		background-color: #f25800;
+		background-image: linear-gradient(90deg,#ff7d26 0%,#f25800 97%);
+		height: 5px;
+		border-radius: 5px 0 0 5px;
+		max-width: 100%;
+	}
+	.crt .rcrt span.c {
+		display: inline-block;
+		color: #288ad6;
+		cursor: pointer;
+	}
+	.crt .bcrt {
+		overflow: hidden;
+		width: 20%;
+	}
+	.crt .bcrt a.close-btt {
+		background: #fff;
+		color: #288ad6;
+		border: 1px solid #ddd;
+	}
+	.crt .bcrt a {
+		display: block;
+		width: 90%;
+		margin: 40px auto;
+		padding: 10px;
+		color: #fff;
+		background-color: #288ad6;
+		border-radius: 5px;
+		text-align: center;
+		box-sizing: border-box;
+	}
+	.toprt form {
+		display: block;
+		overflow: hidden;
+		padding: 10px 0;
+	}
+	.toprt form input {
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		font-size: 14px;
+		color: #999;
+		padding: 5px;
+		margin: 5px 0;
+		height: 28px;
+		width: 43%;
+		display: inline-block;
+		float: left;
+		margin-right: 10px;
+		color: #333;
+	}
+	.toprt form .ips {
+		margin: 10px 20px;
+		height: 25px;
+	}
+	.toprt form .ips span:first-child {
+		display: inline-block;
+		margin-top: 2px;
+		float: left;
+		margin-right: 5px;
+	}
+	.toprt form .lStar {
+		cursor: pointer;
+		margin-left: 5px;
+		display: block;
+		float: left;
+	}
+	.toprt form .lStar i {
+		display: inline-block;
+		vertical-align: baseline;
+	}
+	.toprt form .ips span.rsStar {
+		display: inline-block;
+		margin-left: 10px;
+		position: relative;
+		background: #52b858;
+		color: #fff;
+		padding: 2px 8px;
+		box-sizing: border-box;
+		font-size: 12px;
+		border-radius: 2px;
+	}
+	.toprt form .ct {
+		box-sizing: border-box;
+		width: 50%;
+		float: left;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		margin-top: 5px;
+	}
+	.toprt form textarea {
+		font-size: 14px;
+		color: #999;
+		padding: 5px;
+		margin: 5px 0;
+		width: 100%;
+		height: 78px;
+		resize: none;
+		border: none;
+		box-sizing: border-box;
+	}
+	.toprt form .ct .extCt {
+		padding: 5px;
+		box-sizing: border-box;
+		background: #f7f7f7;
+		border-top: 1px solid #ddd;
+	}
+	.toprt form .ct .extCt label {
+		margin: 7px;
+		font-size: 13px;
+		cursor: pointer;
+	}
+	.lnksimg {
+		color: #288ad6;
+		display: inline-block;
+	}
+	.iconcom-pict {
+		background-position: -80px -25px;
+		width: 18px;
+		height: 16px;
+		margin-right: 5px;
+		vertical-align: sub;
+		background-image: url(https://s.tgdd.vn/comment/Content/images/commentmobile@2x.png);
+		background-size: 270px 128px;
+		background-repeat: no-repeat;
+		display: inline-block;
+		line-height: 30px;
+	}
+	.toprt form .if {
+		box-sizing: border-box;
+		width: 49%;
+		float: right;
+	}
+	.toprt form a {
+		background: #288ad6;
+		border: 1px solid #288ad6;
+		border-radius: 4px;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		font-size: 14px;
+		color: #fff;
+		padding: 9px 0;
+		margin: 5px 0;
+		width: 46%;
+		box-sizing: border-box;
+		display: inline-block;
+		text-align: center;
+	}
+	.resImg {
+		display: inline-block;
+		position: relative;
+		margin: 20px 0 0;
+	}
+	.resImg li {
+		float: left;
+		margin-right: 20px;
+		position: relative;
+	}
+	.resImg img {
+		max-width: 150px;
+	}
+	.resImg i {
+		border: solid 1px #4d4d4d;
+		background: #4d4d4d;
+		height: 25px;
+		width: 25px;
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		position: absolute;
+		color: #fff;
+		font-size: 16px;
+		text-align: center;
+		padding-top: 2px;
+		padding-left: 1px;
+		cursor: pointer;
+		font-style: normal;
+		box-sizing: border-box;
+		right: -10px;
+		top: -10px;
+	}
+	.lbMsgRt {
+		display: block;
+		margin: 10px 0;
+		color: #d0021b;
+	}
+</style>
+</head>
+<body>
+	<div class="w-main">
+		<div class="w-wrap">
+			<ul class="path"><li><a href="" title="Trang chủ">Trang chủ</a> <span>›</span></li><li><a href="">Điện thoại</a> <span>›</span></li><li><a href="">Samsung</a></li></ul>
+			<div class="pro-name clearfix">
+				<h3>Điện thoại Samsung Galaxy A70</h3>
+				<div>
+					<span class="w-icon evlt10"></span>
+					<span class="w-icon evlt10"></span>
+					<span class="w-icon evlt10"></span>
+					<span class="w-icon evlt05"></span>
+					<span class="w-icon evlt00"></span>       
+					<span>188 đánh giá</span>
+				</div>
+			</div>
+			<div class="pro-detail clearfix">
+				<aside class="pro-pic col-md-5">
+					<img src="https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-white-400x460.png" alt="Điện thoại Samsung Galaxy A70">
+					<div class="choose-color">
+						<ul>
+							<li>
+								<div>
+									<img class="" src="https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-blue-200-180x125.png">
+								</div>
+								Xanh Dương
+							</li>
+							<li>
+								<div>
+									<img class="" src="https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-black-200-180x125.png">
+								</div>
+								Đen
+							</li>
+							<li>
+								<div>
+									<img class="" src="https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-white-200-180x125.png">
+								</div>
+								Trắng
+							</li>
+							<li>
+								<div>
+									<span class="w-icon icboxopen"></span>
+								</div>
+								Mở hộp
+							</li>
+							<li>
+								<div>
+									<span class="w-icon icimg360"></span>
+								</div>
+								Hình 360<br>
+								độ
+							</li>
+							<li>
+								<div>
+									<span class="w-icon icvideo"></span>
+								</div>
+								Video
+							</li>
+						</ul>
+					</div>
+				</aside>
+				<aside class="col-md-4">
+					<div class="pro-pri">
+						<strong>9.290.000₫</strong>
+						<label class="tragop">Trả góp 0%</label>
+					</div>
+					<div class="tgnh"><span><a href="javascript:void(0)">NHẬN HÀNG TRONG 1 GIỜ</a></span></div>
+					<div class="pro-prmt zero">
+						<strong data-count="2">Khuyến mãi</strong>
+						<div class="info-prmt">
+							<span>
+								Tặng phiếu mua hàng 10% giá trị sản phẩm đang xem, áp dụng mua phụ kiện - gia dụng.
+							</span>
+							<span>
+								Cơ hội trúng 15 lượng vàng khi mua sản phẩm
+							</span>
+							<span>
+								Tặng phiếu mua hàng 10% giá trị sản phẩm đang xem, áp dụng mua phụ kiện - gia dụng.
+							</span>
+							<span>
+								Cơ hội trúng 15 lượng vàng khi mua sản phẩm
+							</span>
+						</div>
+					</div>
+					<div class="option-shiper">
+						<span class="active">
+							<b>Yêu cầu nhân viên kỹ thuật giao hàng: </b>
+							hỗ trợ copy danh bạ, hướng dẫn sử dụng máy mới, giải đáp thắc mắc sản phẩm.
+						</span>
+					</div>
+					<div class="area_order">
+						<a class="buy_now"><b>Mua ngay </b><span>Giao trong 1 giờ hoặc nhận tại siêu thị</span></a>
+						<a id="tra-gop" class="buy_repay " href=""><b>Mua trả góp 0%</b><span>Thủ tục đơn giản</span></a>
+						<a class="buy_repay s" href=""><b>Trả góp  qua thẻ</b><span>Visa, Master, JCB</span></a>
+					</div>
+					<div class="call">
+						<div>
+							<span>Gọi đặt mua: <a href="tel:19009999">1900.9999</a> (miễn phí - 7:30-22:00)</span>
+						</div>
+					</div>
+				</aside>
+				<div class="col-md-3">
+					<ul class="policy ">
+						<li class="inpr">
+							<span>Trong hộp có: <a href="javascript:void(0)">Sạc,Tai nghe,Sách hướng dẫn,Hộp,Cây lấy sim,Ốp lưng,Cáp</a></span>
+						</li>
+						<li class="wrpr">
+							<span>
+								Bảo hành chính hãng 12 tháng.
+							</span>
+						</li>
+						<li class="chpr">
+							Lỗi là đổi mới trong 1 tháng tại hơn 1800 siêu thị toàn quốc
+							<a href="javascript:openPopWrt();">Xem chi tiết</a>
+						</li>
+					</ul>
+					<div class="productOld">
+						<a class="viewold" target="_blank">
+							Xem Samsung Galaxy A70 cũ
+							<div>
+								<span>Giá dưới: <strong>7.690.000₫</strong></span>
+								<span>Bảo hành tới 11.5 tháng</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="pro-post clearfix">
+				<div class="col-md-8">
+					<h2>Đặc điểm nổi bật của Samsung Galaxy A70</h2>
+					<div class="swiper-container pro-slider col-md-">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a target="_blank" href="" title="">
+									<img src="https://cdn.tgdd.vn/Products/Images/42/195012/Slider/vi-vn-samsung-galaxy-a70-thietke.jpg">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a target="_blank" href="" title="">
+									<img src="https://cdn.tgdd.vn/Products/Images/42/195012/Slider/vi-vn-samsung-galaxy-a70-thietke-2.jpg">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a target="_blank" href="" title="">
+									<img src="https://cdn.tgdd.vn/Products/Images/42/195012/Slider/vi-vn-samsung-galaxy-a70-vantay.gif">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a target="_blank" href="" title="">
+									<img src="https://cdn.tgdd.vn/Products/Images/42/195012/Slider/vi-vn-samsung-galaxy-a70-sacnhanh.jpg">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a target="_blank" href="" title="">
+									<img src="https://cdn.tgdd.vn/Products/Images/42/195012/Slider/vi-vn-samsung-galaxy-a70-cauhinh.jpg">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a target="_blank" href="" title="">
+									<img src="https://cdn.tgdd.vn/Products/Images/42/195012/Slider/vi-vn-samsung-galaxy-a70-amthanh.jpg">
+								</a>
+							</div>
+						</div>
+						<div class="swiper-pagination pro-sliderpgnt"></div>
+						<div class="pro-next"></div>
+						<div class="pro-prev"></div>
+					</div>
+				</div>	
+				<div class="pro-parameter col-md-4">
+					<h2>Thông số kỹ thuật</h2>
+					<ul class="parameter">
+						<li><span>Màn hình:</span><div><a>Super AMOLED</a>, 6.7", Full HD+</div></li><li><span>Hệ điều hành:</span><div><a >Android 9.0 (Pie)</a></div></li><li><span>Camera sau:</span><div>Chính 32 MP &amp; Phụ 8 MP, 5 MP</div></li><li><span>Camera trước:</span><div>32 MP</div></li><li><span>CPU:</span><div><a>Snapdragon 675 8 nhân 64-bit</a></div></li><li><span>RAM:</span><div>6 GB</div></li><li><span>Bộ nhớ trong:</span><div>128 GB</div></li><li><span>Thẻ nhớ:</span><div><a>MicroSD, hỗ trợ tối đa 512 GB</a></div></li><li><span>Thẻ SIM:</span><div><a>2 Nano SIM</a>, <a>Hỗ trợ 4G</a></div><div><b>HOT</b><a>SIM VIETTEL GÔGÔ 4G (3GB data/ tháng)</a>. Giá từ <b>250.000đ</b></div></li><li><span>Dung lượng pin:</span><div>4500 mAh, <a>có sạc nhanh</a></div></li>
+					</ul>
+					<button type="button" class="viewparameterfull">Xem cấu hình chi tiết</button>
+				</div>
+				<div class="boxArticle col-md-8">
+					<article class="area_article">
+						<h2><a href="" target="_blank" title="">Samsung Galaxy A70</a> là một phiên bản phóng to của chiếc&nbsp;<a href="" target="_blank" title="">Samsung Galaxy A50</a> đã ra mắt trước đó với nhiều cải tiến tới từ bên trong.</h2><h3>Màn hình kích thước lớn, trải nghiệm "đã hơn"</h3><p>Màn hình của chiếc Galaxy A70 có kích thước khá lớn lên đến 6.7 inch độ phân giải <a href="" target="_blank" title="">Full HD+</a> trên tấm nền <a href="" target="_blank" title="">Super AMOLED</a>.</p><p><a href=""><img src="https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-tgdd-6.jpg"></a></p><p>Các cạnh viền bezel được tinh chỉnh mỏng hơn, điều này giúp máy trông gọn gàng và cân xứng hơn rất nhiều.</p><p><a href=""><img src="https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-tgdd-10.jpg"></a></p><p>Samsung vẫn trang bị cho Galaxy A70 một mặt lưng vẫn bằng nhựa, nhưng sử dụng chất liệu cao cấp hơn mà <a>Samsung</a> gọi là “3D Graffitistic”.</p><p><a><img src="https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-tgdd-7.jpg"></a></p><p>Ngôn ngữ nhựa giả thủy tinh này cho trải nghiệm tốt hơn, cứng cáp và chắc chắn, khi nhấn vào không bị ọp ẹp như chất liệu nhựa.</p><p><a><img src="https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-mau-xanh.jpg"></a></p><p>Galaxy A70 có 3 màu sắc bán ra tương tự các dòng sản phẩm thấp hơn trước đó là "Đen, Trắng và Xanh". Cả 3 phiên bản này đều được trang bị thêm hiệu ứng lấp lánh nhiều màu khi nghiêng theo góc nhìn rất đẹp mắt.</p><p><a><img src="https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-mau-den.jpg"></a></p><h3>Cảm biến vân tay dưới màn hình tiên tiến</h3><p>Tương tự như người anh em Galaxy A50 thì&nbsp;Galaxy A70 vẫn sở hữu cho mình công nghệ <a>cảm biến vân tay dưới màn hình</a> đang rất hot hiện nay.</p><p>Tốc độ nhận diện và mở khóa máy khá nhanh giúp bạn tiết kiệm được thời gian so với việc nhập mật khẩu thông thường.</p><p><a><img src="https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-vantay.jpg"></a></p><p>Việc được trang bị cảm biến vân tay bên trong màn hình giúp máy trông liền mạch và thanh thoát hơn vì không phải hi sinh bất cứ bộ phận nào để đặt cảm biến này.</p><p><a><img src="https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-tgdd-11.jpg" style="display: block;"></a></p><p>Song song với cảm biến vân tay thì chiếc <a>smartphone</a> này cũng hỗ trợ mở khóa bằng khuôn mặt với độ chính xác khá cao.</p><p></p><p></p><h3>Camera chất lượng cao, nhiều nâng cấp</h3><p>Cụm 3 camera trên Galaxy A70 đã được nâng cấp rõ rệt với camera chính độ phân giải 32 MP cùng&nbsp;ống kính thứ 2 vẫn là 8 MP chụp ảnh góc siêu rộng và ống kính 5 MP dùng để chụp ảnh chân dung xóa phông.</p><p><a ><img src="https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-tgdd-8.jpg"></a></p><p>Với bộ 3 camera thì Samsung Galaxy A50 đáp ứng cho bạn hầu hết các nhu cầu trong sử dụng hằng ngày từ chụp ảnh xóa phông hay chụp phong cảnh trong những chuyến đi chơi xa.</p><p><a><img src="https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-tgdd-12.jpg"></a></p><p>Bên cạnh đó với <a>công nghệ AI Camera</a> đi kèm giúp máy có thể nhận diện được 20 vật thể khác nhau để có thể điều chỉnh màu sắc, độ tương phản và độ sáng sao cho phù hợp.</p><p><a><img src="https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-tgdd-1.jpg"></a></p><p>Camera selfie trên máy cũng sở hữu độ phân giải khủng 32 MP giúp bạn luôn có được những bức ảnh selfie ấn tượng nhất với làn da được làm đẹp một cách tự nhiên.</p><h3>Hiệu năng tốt, pin dùng cả ngày</h3><p>Máy được trang bị vi xử lý <a>Snapdragon 675</a> mạnh mẽ, đi kèm đó là dung lượng RAM 6 GB, bộ nhớ trong 128 GB.</p><p><a><img src="https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-tgdd-3.jpg" style="display: block;"></a></p><p>Đặc biệt dung lượng pin lên tới 4500 mAh giúp bạn sử dụng cả ngày mà không phải lo lắng về việc sạc pin cho thiết bị.</p><p><a><img src="https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-tgdd-2.jpg"></a></p><p>Bên cạnh đó, Galaxy A70 còn hỗ trợ công nghệ sạc nhanh 25W, giúp bạn hồi lại năng lượng để tiếp tục mọi trải nghiệm một cách rất nhanh chóng.</p><p><a><img src="https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-tgdd-9.jpg"></a></p>
+					</article>
+					<p class="show-more">
+						<a class="readmore">Đọc thêm</a>
+					</p>
+				</div>
+				<div class="col-md-4">
+					<div class="newslist">
+						<h4>Tin tức về Samsung Galaxy A70</h4>
+						<ul>
+							<li>
+								<a>
+									<img src="https://cdn.tgdd.vn/Files/2019/07/04/1177281/4_800x450-300x200.jpg">
+									<h3>Samsung Tab A8 và 5 điểm làm bạn thích ngay điện thoại bảng dưới 4 triệu này!</h3>
+								</a>
+							</li>
+							<li>
+								<a>
+									<img src="https://cdn.tgdd.vn/Files/2018/12/25/1140328/samsung_800x450-300x200.jpg">
+									<h3>5 smartphone Samsung đáng sắm dành cho mùa Valentine 2019</h3>
+									<span><i class="icontgdd-com"></i>13 Bình luận</span>
+								</a>
+							</li>
+							<li>
+								<a>
+									<img src="https://cdn.tgdd.vn/Files/2019/01/14/1144573/galaxy-note-8_800x450-300x200.jpg">
+									<h3>5 smartphone Samsung được nhiều người chọn mua đầu Năm mới 2019</h3>
+									<span><i class="icontgdd-com"></i>11 Bình luận</span>
+								</a>
+							</li>
+						</ul>
+						<a class="viewall">Xem tất cả các tin liên quan</a>
+					</div>
+					<div class="newslist">
+						<h4>Hướng dẫn về Samsung Galaxy A70</h4>
+						<ul>
+							<li>
+								<a>
+									<img src="https://cdn.tgdd.vn/hoi-dap/1164985/Thumbnail/danh-gia-cau-hinh-A70-icon-2.jpg" >
+									<h3>Hiệu năng thực tế của Samsung Galaxy A70</h3>
+									<span><i class="icontgdd-com"></i>7 Bình luận</span>
+								</a>
+							</li>
+						</ul>
+						<a class="viewall">Xem thêm hướng dẫn</a>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="hrt">
+						<div class="tltRt ">
+							<h3 data-s="351" data-gpa="3.2" data-c="110">188 đánh giá Samsung Galaxy A70</h3>
+						</div>
+					</div>
+					<div class="toprt">
+						<div class="crt">
+							<div class="lcrt " data-gpa="3.2">
+								<b>3.2 <i class="w-icon icbst"></i></b>
+							</div>
+							<div class="rcrt">
+								<div class="r">
+									<span class="t">5 <i class="w-icon evlt10"></i></span>
+									<div class="bgb">
+										<div class="bgb-in" style="width: 39%"></div>
+									</div>
+									<span class="c"><strong>83</strong> đánh giá</span>
+								</div>
+
+								<div class="r">
+									<span class="t">4 <i class="w-icon evlt10"></i></span>
+									<div class="bgb">
+										<div class="bgb-in" style="width: 7%"></div>
+									</div>
+									<span class="c"><strong>15</strong> đánh giá</span>
+								</div>
+
+								<div class="r">
+									<span class="t">3 <i class="w-icon evlt10"></i></span>
+									<div class="bgb">
+										<div class="bgb-in" style="width: 15%"></div>
+									</div>
+									<span class="c"><strong>31</strong> đánh giá</span>
+								</div>
+								<div class="r">
+									<span class="t">2 <i class="w-icon evlt10"></i></span>
+									<div class="bgb">
+										<div class="bgb-in" style="width: 11%"></div>
+									</div>
+									<span class="c" onclick="ratingCmtList(1,2)" data-buy="13"><strong>23</strong> đánh giá</span>
+								</div>
+								<div class="r">
+									<span class="t">1<i class="w-icon evlt10"></i></span>
+									<div class="bgb">
+										<div class="bgb-in" style="width: 28%"></div>
+									</div>
+									<span class="c"><strong>59</strong> đánh giá</span>
+								</div>
+							</div>
+							<div class="bcrt">
+								<a href="javascript:showInputRating()">Gửi đánh giá</a>
+							</div>
+						</div>
+						<form class="input" name="fRatingComment">
+							<input type="hidden" name="hdfStar" id="hdfStar" value="0">
+							<input type="hidden" name="hdfProductID" id="hdfProductID" value="195012">
+							<input type="hidden" name="hdfRatingImg" class="hdfRatingImg">
+							<div class="ips">
+								<span>Chọn đánh giá của bạn</span>
+								<span class="lStar">
+									<i class="icmst0 w-icon" id="s1"></i>
+									<i class="icmst0 w-icon" id="s2"></i>
+									<i class="icmst0 w-icon" id="s3"></i>
+									<i class="icmst0 w-icon" id="s4"></i>
+									<i class="icmst0 w-icon" id="s5"></i>
+								</span>
+								<span class="rsStar hide"></span>
+							</div>
+							<div class="ipt hide">
+								<div class="ct">
+									<textarea name="fRContent" placeholder="Nhập đánh giá về sản phẩm (tối thiểu 80 ký tự)"></textarea>
+									<div class="extCt">
+										<label class="lnksimg btnRatingUpload"><i class="iconcom-pict"></i>Đính kèm ảnh</label>
+										<span class="ckt"></span>
+										<input id="hdFileRatingUpload" type="file" class="hide" accept="image/x-png, image/gif, image/jpeg">
+									</div>
+								</div>
+								<div class="if">
+									<input type="text" name="fRName" placeholder="Họ tên">
+									<input type="text" name="fRPhone" placeholder="Số điện thoại">
+									<input type="text" name="fREmail" placeholder="Email">
+									<a href="javascript:submitRatingComment();">GỬI ĐÁNH GIÁ</a>
+								</div>
+								<div class="clr"></div>
+								<ul class="resImg hide">
+								</ul>
+								<span class="lbMsgRt"></span>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="accessories col-md-4">
+					<div>
+						<h3>Phụ kiện Samsung Galaxy A70</h3>
+					</div>
+					<ul>
+						<li>
+							<a>
+								<img src="https://cdn.tgdd.vn/Products/Images/54/72775/tai-nghe-ep-kanen-ip-218-ava-600x600.jpg">
+								<h3>Tai nghe nhét trong Kanen IP-218</h3>
+								<strong class="gs">90.000₫</strong>
+								<strong class="gg">150.000₫</strong>
+								<label class="per">Giảm 40%</label>
+							</a>
+						</li>
+						<li>
+							<a>
+								<img src="https://cdn.tgdd.vn/Products/Images/55/69972/the-nho-microsd-8gb-class-4-ava-600x600.jpg">
+								<h3>Thẻ nhớ Micro SD 8 GB Class 4</h3>
+								<strong class="gs">105.000₫</strong>
+								<strong class="gg">150.000₫</strong>
+								<label class="per">Giảm 30%</label>
+							</a>
+						</li>
+						<li>
+							<a>
+								<img src="https://cdn.tgdd.vn/Products/Images/57/197863/pin-sac-du-phong-7500mah-esaver-gram-3-do-1-600x600.jpg">
+								<h3>Pin sạc dự phòng 7500mAh eSaver Gram 3 Đỏ</h3>
+								<strong class="gs">280.000₫</strong>
+								<strong class="gg">400.000₫</strong>
+								<label class="per">Giảm 30%</label>
+							</a>
+						</li>
+						<li>
+							<a>
+								<img src="https://cdn.tgdd.vn/Products/Images/58/135346/sac-xe-hoi-xmobile-dual-usb-ts-c063s-xam-avatar-1-600x600.jpg">
+								<h3>Sạc xe hơi Xmobile Dual USB TS-C063S Xám</h3>
+								<strong class="gs">175.000₫</strong>
+								<strong class="gg">250.000₫</strong>
+								<label class="per">Giảm 30%</label>
+							</a>
+						</li>
+						<li>
+							<a>
+								<img src="https://cdn.tgdd.vn/Products/Images/382/197860/loa-bluetooth-icutes-mb-m916-cu-den-add-600x600.jpg">
+								<h3>Loa Bluetooth iCutes MB-M916 Cú Đen</h3>
+								<strong class="gs">280.000₫</strong>
+								<strong class="gg">400.000₫</strong>
+								<label class="per">Giảm 30%</label>
+							</a>
+						</li>
+					</ul>
+					<a class="viewall">Xem tất cả phụ kiện Samsung Galaxy A70</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../js/swiper.min.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
+<script type="text/javascript" src="../js/slide.js"></script>
+</body>
+</html>

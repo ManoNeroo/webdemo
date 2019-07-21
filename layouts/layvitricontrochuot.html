@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test</title>
+    <style type="text/css">
+    .container{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .d1{
+        width: 40%;
+        height: 100px;
+        background-color: red;
+        
+    }
+    .d2{
+        width: 45%;
+        height: 100px;
+        margin-left: 500px;
+        background: yellow;
+    }
+</style>
+</head>
+<body>
+    <input type="text" id="cursorX" size="3"> X-position of the mouse cursor
+    <br /><br />
+    <input type="text" id="cursorY" size="3"> Y-position of the mouse cursor
+
+    <script type="text/javascript">
+         window.onload=init();
+        function init() {
+            if (window.Event) {
+                document.captureEvents(Event.MOUSEMOVE);
+            }
+            document.onmousemove = getCursorXY;
+        }
+
+        function getCursorXY(e) {
+            document.getElementById('cursorX').value = (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
+            document.getElementById('cursorY').value = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+        }
+    </script>
+</body>
+</html>
